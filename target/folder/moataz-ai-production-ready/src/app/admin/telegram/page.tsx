@@ -1,0 +1,2 @@
+import { publicBaseUrl } from "@/lib/utils/env";
+export default function TelegramAdminPage(){const base=publicBaseUrl().replace(/\/$/,"");return <section className="section"><h1>إدارة بوت تليجرام</h1><div className="card"><p>Webhook:</p><pre>{`${base}/api/telegram/webhook`}</pre><p>رابط التفعيل:</p><pre>{`${base}/api/telegram/setup?key=ADMIN_PANEL_KEY`}</pre><p>المتغيرات المطلوبة: TELEGRAM_BOT_TOKEN, TELEGRAM_WEBHOOK_SECRET, TELEGRAM_OWNER_ID, TELEGRAM_ADMIN_IDS, PUBLIC_URL.</p></div></section>}
