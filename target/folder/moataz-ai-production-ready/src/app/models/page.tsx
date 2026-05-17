@@ -1,0 +1,2 @@
+import { providerStates } from "@/lib/ai/providers";
+export default function ModelsPage(){const providers=providerStates();return <section className="section"><h1>النماذج والمزودات</h1><div className="grid">{providers.map(p=><div className="card" key={p.slug}><span className={`badge ${p.configured?'ok':'danger'}`}>{p.configured?'مفعل':'يحتاج متغير'}</span><h2>{p.name}</h2><p>{p.model||'غير محدد'}</p><p>مجاني/مفتوح غالبًا: {p.freeHint?'نعم':'لا'}</p></div>)}</div></section>}
